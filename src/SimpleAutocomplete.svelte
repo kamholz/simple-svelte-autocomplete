@@ -147,7 +147,7 @@
   $: selectedItem, onSelectedItemChanged();
 
   // HTML elements
-  let input;
+  export let input;
   let list;
 
   // UI state
@@ -735,7 +735,8 @@
     on:focus={onFocus}
     on:keydown={onKeyDown}
     on:click={onInputClick}
-    on:keypress={onKeyPress} />
+    on:keypress={onKeyPress}
+    on:blur />
   {#if showClear}
     <span on:click={clear} class="autocomplete-clear-button">&#10006;</span>
   {/if}
