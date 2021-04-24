@@ -42,7 +42,6 @@
     return true;
   };
   export let onChange = function(newSelectedItem) {};
-  export let onClose = function() {};
 
   export let selectFirstIfEmpty = false;
 
@@ -148,7 +147,7 @@
   $: selectedItem, onSelectedItemChanged();
 
   // HTML elements
-  export let input;
+  export let input = null;
   let list;
 
   // UI state
@@ -550,8 +549,6 @@
       highlightFilter = 0;
       selectItem();
     }
-
-    onClose();
   }
 
   function isMinCharsToSearchReached() {
