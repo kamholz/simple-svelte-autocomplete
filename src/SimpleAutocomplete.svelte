@@ -42,6 +42,7 @@
     return true;
   };
   export let onChange = function(newSelectedItem) {};
+  export let onClose = function() {};
 
   export let selectFirstIfEmpty = false;
 
@@ -549,6 +550,8 @@
       highlightFilter = 0;
       selectItem();
     }
+
+    onClose();
   }
 
   function isMinCharsToSearchReached() {
